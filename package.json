@@ -1,9 +1,12 @@
 {
   "name": "n8n-nodes-livetennisapi",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "n8n community node for the Live Tennis API — real-time tennis scores, matches, players, fixtures, rankings, head-to-head and the 1968–2022 results archive",
   "license": "MIT",
-  "homepage": "https://github.com/livetennisapi/n8n-nodes-livetennisapi",
+  "homepage": "https://github.com/bensynapse/n8n-nodes-livetennisapi",
+  "bugs": {
+    "url": "https://github.com/bensynapse/n8n-nodes-livetennisapi/issues"
+  },
   "keywords": [
     "n8n-community-node-package",
     "tennis",
@@ -17,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/livetennisapi/n8n-nodes-livetennisapi.git"
+    "url": "https://github.com/bensynapse/n8n-nodes-livetennisapi.git"
   },
   "engines": {
     "node": ">=20.15"

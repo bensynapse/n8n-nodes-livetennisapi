@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 — 2026-10-23
+
+- The source now lives at https://github.com/bensynapse/n8n-nodes-livetennisapi.
+  Repository, homepage and issue links point there. No change to the node itself.
+
 ## 0.2.0 — 2026-08-07
 
 - **New resources.** H2H (`/h2h` — the record between two players across the

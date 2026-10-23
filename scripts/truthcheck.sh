@@ -34,7 +34,15 @@ require() {
 forbid '100,?000 *(requests|req|calls|/day)|100k *(requests|req|calls|/day)' 'no tier has a 100k/day quota'
 forbid 'free[^.]*1,?000[^.]*(/| per )day|1,?000 *(requests?)? *(/| per )day[^.]*free' 'FREE is 100 requests/day since 2026-08-06'
 forbid 'livetennisapi\.com/docs' 'docs live at docs.livetennisapi.com, not livetennisapi.com/docs'
-forbid 'bensynapse' 'use the Live Tennis API org identity'
+# The source repo lives at github.com/bensynapse/n8n-nodes-livetennisapi while
+# the livetennisapi GitHub org is suspended; that exact address is the only
+# allowed use of the personal account name.
+hits=$(printf '%s\n' "$files" | xargs grep -in 'bensynapse' 2>/dev/null | sed 's#github\.com/bensynapse/n8n-nodes-livetennisapi##g; s#repository bensynapse/n8n-nodes-livetennisapi##g' | grep -i 'bensynapse')
+if [ -n "$hits" ]; then
+	echo 'FORBIDDEN (use the Live Tennis API org identity):'
+	printf '%s\n' "$hits"
+	fail=1
+fi
 forbid 'midnight UTC' 'the daily quota resets at the resets_at instant, not midnight UTC'
 
 # The README states quotas, so the current pins must be present.

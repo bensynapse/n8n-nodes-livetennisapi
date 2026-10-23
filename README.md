@@ -1,6 +1,6 @@
 # n8n-nodes-livetennisapi
 
-[![CI](https://github.com/livetennisapi/n8n-nodes-livetennisapi/actions/workflows/ci.yml/badge.svg)](https://github.com/livetennisapi/n8n-nodes-livetennisapi/actions/workflows/ci.yml)
+[![CI](https://github.com/bensynapse/n8n-nodes-livetennisapi/actions/workflows/ci.yml/badge.svg)](https://github.com/bensynapse/n8n-nodes-livetennisapi/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/n8n-nodes-livetennisapi)](https://www.npmjs.com/package/n8n-nodes-livetennisapi)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
@@ -140,7 +140,7 @@ Requires n8n 1.x. Built declaratively with zero runtime dependencies.
 - [Live Tennis API documentation](https://docs.livetennisapi.com)
 - [Get a free API key](https://livetennisapi.com/subscribe/free)
 - [Live Tennis API Discord](https://discord.gg/f8WUZHgDm6)
-- [Live Tennis API on GitHub](https://github.com/livetennisapi)
+- [Live Tennis API on npm](https://www.npmjs.com/~livetennisapi)
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 
 ## Affiliate program

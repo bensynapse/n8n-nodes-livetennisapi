@@ -13,7 +13,7 @@
 #
 # Option B — OIDC Trusted Publishing (no long-lived secret):
 #   On npmjs.com, in the package's settings → Trusted Publishers, add
-#   GitHub Actions with repository livetennisapi/n8n-nodes-livetennisapi and
+#   GitHub Actions with repository bensynapse/n8n-nodes-livetennisapi and
 #   workflow release.yml. Leave NPM_TOKEN unset.
 #
 # ── RELEASE PROCESS ───────────────────────────────────────────────────────────
