@@ -16,3 +16,20 @@ updates:
     groups:
       npm-minor-patch:
         update-types: [minor, patch]
+    # The open alerts for zod, qs, minimatch, stream-json, uuid and deepmerge sit in
+    # the dev toolchain pulled by @n8n/node-cli, which pins versions without a fix in
+    # range. package.json "overrides" cannot pin them: the n8n lint rule
+    # @n8n/community-nodes/no-overrides-field rejects that field. They clear when
+    # @n8n/node-cli updates its tree. deepmerge has no fixed release at all.
+    ignore:
+      # TypeScript 7 is the Go compiler line. @n8n/node-cli pins typescript-eslint,
+      # whose typescript-estree supports typescript < 6.1 only and crashes on 7
+      # ("Cannot read properties of undefined (reading 'Intrinsic')", PR #4).
+      # Drop when @n8n/node-cli ships a typescript-eslint whose peer range allows 7.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
+      # eslint-plugin-n8n-nodes-base 2.0.0 calls context.getFilename, which eslint 10
+      # removed, so `n8n-node lint` crashes (PR #5). @n8n/node-cli also pins eslint 9.
+      # Drop when eslint-plugin-n8n-nodes-base and @n8n/node-cli support eslint 10.
+      - dependency-name: eslint
+        update-types: ["version-update:semver-major"]
